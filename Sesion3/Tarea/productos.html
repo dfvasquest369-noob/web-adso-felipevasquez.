@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Panadería Los Sovieticos</title>
+
+    <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #fbf7f1;
+      color: #34271f;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #513523, #8b5938);
+      color: white;
+      text-align: center;
+      padding: 32px 20px;
+    }
+
+    nav {
+      background-color: #fff;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 2px 10px #34271f0d;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #68442d;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: #c2763b;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 42px auto;
+      padding: 0 20px;
+    }
+
+    main > h2 {
+      margin-bottom: 6px;
+      color: #513523;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+
+    .intro {
+      margin-top: 0;
+      margin-bottom: 22px;
+      color: #75675c;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background-color: white;
+      border: 1px solid #eee5db;
+      border-radius: 14px;
+      box-shadow: 0 12px 32px #51352312;
+    }
+
+    table {
+      width: 100%;
+      min-width: 580px;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    caption {
+      padding: 18px 22px;
+      color: #75675c;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #f4ede5;
+      color: #513523;
+    }
+
+    th,
+    td {
+      padding: 16px 22px;
+    }
+
+    th {
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    tbody tr {
+      border-top: 1px solid #f0e9e2;
+      transition: background-color 0.2s ease;
+    }
+
+    tbody tr:not(.promotion):hover {
+      background-color: #fffaf4;
+    }
+
+    tbody td:first-child {
+      color: #513523;
+      font-weight: 700;
+    }
+
+    .price {
+      color: #754522;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .promotion {
+      background-color: #fdf3e7;
+      color: #603d24;
+      font-weight: 700;
+    }
+
+    .promotion td:last-child {
+      color: #a24f20;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 30px auto;
+        padding: 0 14px;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+      }
+    }
+
+    footer {
+      background-color: #513523;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      color: white;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+
+  </head>
+<body>
+
+    <header>
+        <h1>Panadería Los Sovieticos</h1>
+    </header>
+
+    <nav>
+        <a href="index3.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main>
+        <h2>Lista de productos</h2>
+        <p class="intro">Hechos con cariño y recién horneados para ti.</p>
+
+        <div class="table-container">
+        <table>
+            <caption>Productos y precios</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Pan de bono</td>
+                    <td>Pan de queso recién horneado</td>
+                    <td class="price">$2.500</td>
+                </tr>
+
+                <tr>
+                    <td>Pan de chocolate</td>
+                    <td>Pan suave relleno de chocolate</td>
+                    <td class="price">$3.500</td>
+                </tr>
+
+                <tr>
+                    <td>Croissant</td>
+                    <td>Hojaldre tradicional</td>
+                    <td class="price">$4.000</td>
+                </tr>
+
+                <tr>
+                    <td>Torta de vainilla</td>
+                    <td>Porción de torta casera</td>
+                    <td class="price">$5.500</td>
+                </tr>
+
+                <tr>
+                    <td>Café con leche</td>
+                    <td>Café caliente preparado al momento</td>
+                    <td class="price">$3.000</td>
+                </tr>
+
+                <tr>
+                    <td>Chocolate caliente</td>
+                    <td>Bebida de chocolate y leche</td>
+                    <td class="price">$4.000</td>
+                </tr>
+
+                <tr class="promotion">
+                    <td colspan="2">PROMOCIÓN: 2 panes de bono + café</td>
+                    <td>$7.000</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Panadería Los Sovieticos</p>
+    </footer>
+
+</body>
+</html>

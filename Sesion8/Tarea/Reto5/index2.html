@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de inscripción a cursos.">
+  <title>Formulario de inscripción</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <header class="encabezado">
+      <p class="etiqueta">Inscripciones</p>
+      <h1>Formulario de inscripción</h1>
+      <p>Completa tus datos y selecciona el curso que deseas realizar.</p>
+    </header>
+
+    <form id="formInscripcion" action="#" method="post">
+
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            autocomplete="name"
+            minlength="3"
+            required
+            aria-describedby="error-nombre"
+          >
+          <small id="error-nombre" class="error"></small>
+        </div>
+
+        <div class="campo">
+          <label for="documento">Documento de identidad</label>
+          <input
+            type="text"
+            id="documento"
+            name="documento"
+            inputmode="numeric"
+            autocomplete="off"
+            pattern="[0-9]{6,10}"
+            title="Ingresa solo números: mínimo 6 y máximo 10 dígitos."
+            required
+            aria-describedby="error-documento"
+          >
+          <small id="error-documento" class="error"></small>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            autocomplete="email"
+            required
+            aria-describedby="error-correo"
+          >
+          <small id="error-correo" class="error"></small>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Celular</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            inputmode="numeric"
+            autocomplete="tel"
+            pattern="3[0-9]{9}"
+            maxlength="10"
+            title="Ingresa 10 dígitos y asegúrate de que el primero sea 3."
+            required
+            aria-describedby="error-telefono"
+          >
+          <small id="error-telefono" class="error"></small>
+        </div>
+
+        <div class="campo campo-checkbox">
+          <input
+            type="checkbox"
+            id="terminos"
+            name="terminos"
+            required
+            aria-describedby="error-terminos"
+          >
+          <label for="terminos">
+            Autorizo el tratamiento de mis datos personales.
+          </label>
+          <small id="error-terminos" class="error"></small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Curso</legend>
+
+        <div class="campo">
+          <label for="programa">Programa de formación</label>
+          <select
+            id="programa"
+            name="programa"
+            required
+            aria-describedby="error-programa"
+          >
+            <option value="" selected disabled>
+              Selecciona un curso
+            </option>
+            <option value="desarrollo-web">Desarrollo web</option>
+            <option value="diseno-grafico">Diseño gráfico</option>
+            <option value="analisis-datos">Análisis de datos</option>
+          </select>
+          <small id="error-programa" class="error"></small>
+        </div>
+
+        <div class="campo">
+          <span class="etiqueta-campo">Jornada</span>
+
+          <div
+            class="opciones-radio"
+            role="group"
+            aria-label="Selecciona una jornada"
+          >
+            <div class="opcion-radio">
+              <input
+                type="radio"
+                id="jornada-manana"
+                name="jornada"
+                value="mañana"
+                required
+                aria-describedby="error-jornada"
+              >
+              <label for="jornada-manana">Mañana</label>
+            </div>
+
+            <div class="opcion-radio">
+              <input
+                type="radio"
+                id="jornada-tarde"
+                name="jornada"
+                value="tarde"
+                required
+                aria-describedby="error-jornada"
+              >
+              <label for="jornada-tarde">Tarde</label>
+            </div>
+
+            <div class="opcion-radio">
+              <input
+                type="radio"
+                id="jornada-noche"
+                name="jornada"
+                value="noche"
+                required
+                aria-describedby="error-jornada"
+              >
+              <label for="jornada-noche">Noche</label>
+            </div>
+          </div>
+
+          <small id="error-jornada" class="error"></small>
+        </div>
+      </fieldset>
+
+      <button type="submit">Enviar inscripción</button>
+    </form>
+
+    <section id="resumen" aria-live="polite"></section>
+  </main>
+</body>
+</html>

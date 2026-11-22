@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 3.5rem 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #eef2f6;
+  color: #172b3a;
+}
+
+/*
+  margin crea espacio por fuera del borde y separa elementos.
+  padding crea espacio por dentro del borde, entre el contenido y la caja.
+  Por ejemplo, .portafolio usa margin para centrarse y padding para
+  separar su contenido de los bordes.
+*/
+.portafolio {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  border: 1px solid #dce5e9;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(20, 48, 63, 0.12);
+}
+
+.perfil {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e7edef;
+}
+
+.perfil-identidad {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.avatar {
+  display: grid;
+  flex: 0 0 76px;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border-radius: 22px;
+  background: #d8f1e8;
+  font-size: 2.5rem;
+}
+
+.sobrelinea,
+.sesion,
+.contador-retos,
+.pie > span {
+  color: #66808a;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.sobrelinea {
+  margin: 0 0 0.35rem;
+}
+
+#nombre {
+  margin: 0;
+  color: #173b48;
+  font-size: clamp(1.35rem, 4vw, 2rem);
+}
+
+.rol {
+  margin: 0.45rem 0 0;
+  color: #38866d;
+  font-weight: 600;
+}
+
+.separador {
+  padding: 0 0.25rem;
+  color: #a5b7b8;
+}
+
+.motivacion {
+  margin: 1.5rem 0 0;
+  color: #60747d;
+  font-size: 0.95rem;
+}
+
+.seccion-habilidades {
+  padding: 1.5rem 0 1.75rem;
+  border-bottom: 1px solid #e7edef;
+}
+
+h2 {
+  margin: 0;
+  color: #173b48;
+  font-size: 1.15rem;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.habilidades li {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #cbe9dc;
+  border-radius: 999px;
+  background: #eff9f4;
+  color: #287558;
+  font-size: 0.85rem;
+}
+
+.seccion-retos {
+  padding-top: 2rem;
+}
+
+.encabezado-retos {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.encabezado-retos .sobrelinea {
+  margin-bottom: 0.35rem;
+}
+
+.contador-retos {
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  background: #f1f5f5;
+  white-space: nowrap;
+}
+
+.retos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.reto {
+  display: flex;
+  min-height: 150px;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  border: 1px solid #dce8e8;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fbfdfc, #f2f8f6);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.reto:hover {
+  transform: translateY(-3px);
+  border-color: #a9d7c5;
+  box-shadow: 0 12px 24px rgba(33, 93, 75, 0.1);
+}
+
+.numero-reto {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 15px;
+  background: #dff2e9;
+  color: #287558;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.reto-contenido {
+  min-width: 0;
+  flex: 1;
+}
+
+.sesion {
+  margin: 0 0 0.3rem;
+  color: #4c927b;
+}
+
+.reto h3 {
+  margin: 0;
+  color: #1e414d;
+  font-size: 1rem;
+}
+
+.enlace-reto {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #287558;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.enlace-reto:hover {
+  color: #174c3a;
+}
+
+.enlace-reto:focus-visible,
+.boton:focus-visible {
+  outline: 3px solid #ffb300;
+  outline-offset: 3px;
+}
+
+.pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e7edef;
+}
+
+.boton {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #287558;
+  border-radius: 9px;
+  background: #287558;
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: #1f6248;
+}
+
+body.oscuro {
+  background: #101a20;
+  color: #e5e7eb;
+}
+
+body.oscuro .portafolio {
+  border-color: #35474d;
+  background: #1b2a30;
+  box-shadow: none;
+}
+
+body.oscuro #nombre,
+body.oscuro h2,
+body.oscuro .reto h3 {
+  color: #e4f0ed;
+}
+
+body.oscuro .motivacion,
+body.oscuro .sobrelinea,
+body.oscuro .contador-retos,
+body.oscuro .pie > span {
+  color: #afc3c2;
+}
+
+body.oscuro .perfil,
+body.oscuro .seccion-habilidades,
+body.oscuro .pie {
+  border-color: #35474d;
+}
+
+body.oscuro .contador-retos {
+  background: #26383e;
+}
+
+body.oscuro .habilidades li,
+body.oscuro .numero-reto {
+  border-color: #3c6255;
+  background: #29463c;
+  color: #c5ead8;
+}
+
+body.oscuro .reto {
+  border-color: #354b4e;
+  background: linear-gradient(135deg, #223338, #202f34);
+}
+
+body.oscuro .enlace-reto,
+body.oscuro .rol {
+  color: #8dd4b3;
+}
+
+body.oscuro .avatar {
+  background: #29463c;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.75rem;
+  }
+
+  .portafolio {
+    border-radius: 20px;
+  }
+
+  .perfil-identidad {
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .avatar {
+    flex-basis: 58px;
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+    font-size: 2rem;
+  }
+
+  .retos {
+    grid-template-columns: 1fr;
+  }
+
+  .reto {
+    min-height: 125px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

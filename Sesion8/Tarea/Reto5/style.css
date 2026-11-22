@@ -1,0 +1,261 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #182230;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 16px;
+  background: linear-gradient(
+    145deg,
+    #eef4ff 0%,
+    #f8fafc 55%,
+    #eef8f5 100%
+  );
+}
+
+.contenedor {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 40px);
+  background: #fff;
+  border: 1px solid #e1e8f0;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgb(22 42 70 / 9%);
+}
+
+.encabezado {
+  margin-bottom: 28px;
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  color: #176b5b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 10px;
+  color: #14253d;
+  font-size: clamp(1.7rem, 4vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.encabezado > p:last-child {
+  margin: 0;
+  color: #5c6878;
+  line-height: 1.6;
+}
+
+form {
+  display: grid;
+  gap: 22px;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 22px;
+  border: 1px solid #d8e1eb;
+  border-radius: 12px;
+}
+
+legend {
+  padding: 0 9px;
+  color: #176b5b;
+  font-size: 1.05rem;
+  font-weight: 750;
+}
+
+.campo {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.campo:last-child {
+  margin-bottom: 0;
+}
+
+.campo > label,
+.etiqueta-campo {
+  color: #26364a;
+  font-size: 0.94rem;
+  font-weight: 650;
+}
+
+/* Campos de ancho completo */
+.campo input:not([type="radio"]):not([type="checkbox"]),
+.campo select {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid #bac7d6;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #182230;
+  font: inherit;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.campo input::placeholder {
+  color: #778496;
+}
+
+/* Foco visible al usar teclado */
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #80b8ff;
+  outline-offset: 3px;
+}
+
+.campo input:focus-visible,
+.campo select:focus-visible {
+  border-color: #2369c8;
+  box-shadow: 0 0 0 3px rgb(35 105 200 / 13%);
+}
+
+/* Campos inválidos: validación del navegador y clase manual */
+.campo input:user-invalid,
+.campo select:user-invalid,
+.campo input.invalido,
+.campo select.invalido {
+  border-color: #c62828;
+  background-color: #fff8f8;
+}
+
+.campo input:user-invalid:focus-visible,
+.campo select:user-invalid:focus-visible,
+.campo input.invalido:focus-visible,
+.campo select.invalido:focus-visible {
+  outline-color: #d84343;
+  box-shadow: 0 0 0 3px rgb(198 40 40 / 14%);
+}
+
+/* Mensajes de error */
+.error {
+  display: block;
+  min-height: 0;
+  color: #b42318;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.error:not(:empty) {
+  min-height: 1em;
+}
+
+/* Opciones de jornada */
+.opciones-radio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  padding: 3px 0;
+}
+
+.opcion-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.opcion-radio input,
+.campo-checkbox input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #176b5b;
+}
+
+.opcion-radio label,
+.campo-checkbox label {
+  color: #344256;
+  line-height: 1.45;
+}
+
+/* Casilla de autorización */
+.campo-checkbox {
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 10px;
+  row-gap: 7px;
+  margin-top: 4px;
+}
+
+.campo-checkbox input {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 2px;
+}
+
+.campo-checkbox label {
+  grid-column: 2;
+  grid-row: 1;
+  font-weight: 500;
+}
+
+.campo-checkbox .error {
+  grid-column: 2;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #176b5b;
+  color: #fff;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button[type="submit"]:hover {
+  background: #105547;
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* Resumen */
+#resumen {
+  margin-top: 20px;
+}
+
+/* Diseño adaptable a celulares */
+@media (max-width: 520px) {
+  body {
+    padding: 14px 10px;
+  }
+
+  .contenedor {
+    padding: 20px 15px;
+    border-radius: 13px;
+  }
+
+  fieldset {
+    padding: 18px 13px;
+  }
+
+  .opciones-radio {
+    gap: 12px 16px;
+  }
+}

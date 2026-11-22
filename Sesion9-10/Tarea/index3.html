@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f1f5f9">
+  <title>Mis tareas</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+  <main class="app-tareas tarjeta">
+    <header class="app-tareas-encabezado">
+      <button class="boton-menu" type="button" aria-label="Cerrar menú" aria-expanded="true" aria-controls="barra-lateral">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <a class="marca" href="#inicio">
+        <span class="marca-icono" aria-hidden="true">✓</span>
+        <span>Tareas</span>
+      </a>
+      <span class="encabezado-detalle">Organiza tu día</span>
+    </header>
+
+    <div class="app-tareas-cuerpo" id="inicio">
+      <aside class="barra-lateral" id="barra-lateral" aria-label="Secciones de tareas">
+        <p class="barra-titulo">MI ESPACIO</p>
+        <button class="enlace-lateral activo" type="button" data-filtro="todas" data-titulo="Mis tareas" aria-pressed="true">
+          <span aria-hidden="true">▤</span>
+          <span>Todas las tareas</span>
+          <span class="cantidad" data-cantidad="todas">3</span>
+        </button>
+        <button class="enlace-lateral" type="button" data-filtro="pendientes" data-titulo="Pendientes" aria-pressed="false">
+          <span aria-hidden="true">◷</span>
+          <span>Pendientes</span>
+          <span class="cantidad" data-cantidad="pendientes">2</span>
+        </button>
+        <button class="enlace-lateral" type="button" data-filtro="completadas" data-titulo="Completadas" aria-pressed="false">
+          <span aria-hidden="true">✓</span>
+          <span>Completadas</span>
+          <span class="cantidad" data-cantidad="completadas">1</span>
+        </button>
+      </aside>
+
+      <section class="contenido-tareas" aria-labelledby="titulo-tareas">
+        <div class="contenido-encabezado">
+          <div>
+            <p class="sobrelinea">TU LISTA</p>
+            <h1 id="titulo-tareas">Mis tareas</h1>
+          </div>
+          <span class="fecha">Hoy</span>
+        </div>
+
+        <form class="app-tareas-form">
+          <label for="nuevaTarea" class="oculto-visual">Nueva tarea</label>
+          <input type="text" id="nuevaTarea" placeholder="Escribe una tarea...">
+          <button type="submit" class="boton">Agregar tarea</button>
+        </form>
+
+        <p class="alerta alerta-error oculto" role="alert">⚠️ Escribe algo antes de agregar.</p>
+
+        <ul class="lista-tareas" id="lista-tareas" aria-label="Lista de tareas">
+          <li class="tarea">
+            <span class="tarea-check" aria-hidden="true"></span>
+            <span class="tarea-texto">Estudiar para el quiz</span>
+            <button class="boton-icono boton-peligro" type="button" aria-label="Eliminar tarea: Estudiar para el quiz">
+              <span aria-hidden="true">🗑️</span>
+            </button>
+          </li>
+          <li class="tarea hecha">
+            <span class="tarea-check" aria-hidden="true">✓</span>
+            <span class="tarea-texto">Subir el reto</span>
+            <button class="boton-icono boton-peligro" type="button" aria-label="Eliminar tarea: Subir el reto">
+              <span aria-hidden="true">🗑️</span>
+            </button>
+          </li>
+          <li class="tarea">
+            <span class="tarea-check" aria-hidden="true"></span>
+            <span class="tarea-texto">Organizar documentos</span>
+            <button class="boton-icono boton-peligro" type="button" aria-label="Eliminar tarea: Organizar documentos">
+              <span aria-hidden="true">🗑️</span>
+            </button>
+          </li>
+        </ul>
+
+        <p class="contador" id="contador-tareas" aria-live="polite">2 pendientes <span aria-hidden="true">·</span> 3 tareas</p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const menuButton = document.querySelector(".boton-menu");
+    const menuBody = document.querySelector(".app-tareas-cuerpo");
+    const menuIcon = menuButton.querySelector("[aria-hidden='true']");
+
+    menuButton.addEventListener("click", () => {
+      const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isExpanded));
+      menuButton.setAttribute("aria-label", isExpanded ? "Abrir menú" : "Cerrar menú");
+      menuIcon.textContent = isExpanded ? "☰" : "×";
+      menuBody.classList.toggle("menu-cerrado", isExpanded);
+    });
+
+    const filterButtons = document.querySelectorAll("[data-filtro]");
+    const taskItems = [...document.querySelectorAll(".tarea")];
+    const taskTitle = document.querySelector("#titulo-tareas");
+    const taskCounter = document.querySelector("#contador-tareas");
+    const completedCount = taskItems.filter((task) => task.classList.contains("hecha")).length;
+    const pendingCount = taskItems.length - completedCount;
+
+    document.querySelector('[data-cantidad="todas"]').textContent = taskItems.length;
+    document.querySelector('[data-cantidad="pendientes"]').textContent = pendingCount;
+    document.querySelector('[data-cantidad="completadas"]').textContent = completedCount;
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filtro;
+
+        taskItems.forEach((task) => {
+          const isCompleted = task.classList.contains("hecha");
+          task.hidden =
+            (filter === "pendientes" && isCompleted) ||
+            (filter === "completadas" && !isCompleted);
+        });
+
+        filterButtons.forEach((filterButton) => {
+          const isSelected = filterButton === button;
+          filterButton.classList.toggle("activo", isSelected);
+          filterButton.setAttribute("aria-pressed", String(isSelected));
+        });
+
+        taskTitle.textContent = button.dataset.titulo;
+        if (filter === "pendientes") {
+          taskCounter.textContent = pendingCount === 1 ? "1 tarea pendiente" : `${pendingCount} tareas pendientes`;
+        } else if (filter === "completadas") {
+          taskCounter.textContent = completedCount === 1 ? "1 tarea completada" : `${completedCount} tareas completadas`;
+        } else {
+          taskCounter.textContent = `${pendingCount} pendientes · ${taskItems.length} tareas`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

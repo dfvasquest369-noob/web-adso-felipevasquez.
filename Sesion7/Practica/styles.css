@@ -1,0 +1,32 @@
+﻿body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4efe7;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+  display: block;
+}
+
+.galeria .destacada {
+  grid-column: span 2;
+  height: 320px;
+}
+
+.galeria .destacada {
+  grid-column: span 2;   /* ocupa 2 columnas */
+  grid-row: span 2;      /* y 2 filas */
+  height: 100%;
+}

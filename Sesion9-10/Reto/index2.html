@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Kit CSS | Operación HTML</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="marca" href="#inicio" aria-label="Kit CSS, inicio">
+      <span class="marca-icono" aria-hidden="true">&lt;/&gt;</span>
+      <span>Kit<span class="marca-resaltada">CSS</span></span>
+    </a>
+    <span class="etiqueta-cabecera">Operación HTML · Reto</span>
+  </header>
+
+  <main id="inicio" class="contenedor">
+    <section class="intro" aria-labelledby="titulo-principal">
+      <p class="ceja">SISTEMA DE DISEÑO · 01</p>
+      <h1 id="titulo-principal">Un kit para cada interfaz</h1>
+      <p class="intro-texto">Componentes sencillos, estados claros y una paleta lista para construir.</p>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-colores">
+      <div class="encabezado-seccion">
+        <span class="numero-seccion">01</span>
+        <div>
+          <h2 id="titulo-colores">Paleta de colores</h2>
+          <p>Colores definidos con variables CSS y listos para reutilizar.</p>
+        </div>
+      </div>
+      <div class="muestras">
+        <div class="muestra">
+          <span class="muestra-color color-primario" aria-hidden="true"></span>
+          <span class="muestra-nombre">--color-primario</span>
+          <span class="muestra-valor">Azul · #4f46e5</span>
+        </div>
+        <div class="muestra">
+          <span class="muestra-color color-secundario" aria-hidden="true"></span>
+          <span class="muestra-nombre">--color-secundario</span>
+          <span class="muestra-valor">Verde · #0f9f78</span>
+        </div>
+        <div class="muestra">
+          <span class="muestra-color color-peligro" aria-hidden="true"></span>
+          <span class="muestra-nombre">--color-peligro</span>
+          <span class="muestra-valor">Rojo · #dc3545</span>
+        </div>
+        <div class="muestra">
+          <span class="muestra-color color-aviso" aria-hidden="true"></span>
+          <span class="muestra-nombre">--color-aviso</span>
+          <span class="muestra-valor">Ámbar · #d97706</span>
+        </div>
+        <div class="muestra">
+          <span class="muestra-color color-texto" aria-hidden="true"></span>
+          <span class="muestra-nombre">--color-texto</span>
+          <span class="muestra-valor">Tinta · #1f2937</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-tipografia">
+      <div class="encabezado-seccion">
+        <span class="numero-seccion">02</span>
+        <div>
+          <h2 id="titulo-tipografia">Tipografía</h2>
+          <p>Una jerarquía clara para leer de un vistazo.</p>
+        </div>
+      </div>
+      <div class="panel tipografia">
+        <h1>Encabezado principal</h1>
+        <h2>Encabezado de sección</h2>
+        <h3>Encabezado de detalle</h3>
+        <p>Este párrafo incluye un <a href="#titulo-colores">enlace de ejemplo</a> con un estilo reconocible.</p>
+        <small>Texto pequeño para notas y detalles complementarios.</small>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-botones">
+      <div class="encabezado-seccion">
+        <span class="numero-seccion">03</span>
+        <div>
+          <h2 id="titulo-botones">Botones</h2>
+          <p>Acciones principales, alternativas y un estado deshabilitado.</p>
+        </div>
+      </div>
+      <div class="panel fila-componentes">
+        <button class="boton boton-principal" type="button">Principal</button>
+        <button class="boton boton-secundario" type="button">Secundario</button>
+        <button class="boton boton-peligro" type="button">Peligro</button>
+        <button class="boton boton-principal" type="button" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-alertas">
+      <div class="encabezado-seccion">
+        <span class="numero-seccion">04</span>
+        <div>
+          <h2 id="titulo-alertas">Alertas e insignias</h2>
+          <p>Mensajes para informar, confirmar o llamar la atención.</p>
+        </div>
+      </div>
+      <div class="rejilla-alertas">
+        <div class="alerta alerta-info" role="status"><strong>Información</strong><span>Hay una actualización disponible.</span></div>
+        <div class="alerta alerta-exito" role="status"><strong>Éxito</strong><span>Los cambios se guardaron.</span></div>
+        <div class="alerta alerta-aviso" role="status"><strong>Atención</strong><span>Revisa los datos antes de continuar.</span></div>
+        <div class="alerta alerta-peligro" role="alert"><strong>Error</strong><span>No se pudo completar la acción.</span></div>
+      </div>
+      <div class="panel fila-insignias" aria-label="Ejemplos de insignias">
+        <span class="insignia insignia-info">En progreso</span>
+        <span class="insignia insignia-exito">Completado</span>
+        <span class="insignia insignia-aviso">Pendiente</span>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-estados">
+      <div class="encabezado-seccion">
+        <span class="numero-seccion">05</span>
+        <div>
+          <h2 id="titulo-estados">Estados de interfaz</h2>
+          <p>Señales visuales para los momentos clave de una interacción.</p>
+        </div>
+      </div>
+      <div class="panel rejilla-estados">
+        <div class="estado-item">
+          <span class="estado-etiqueta">Cargando</span>
+          <span class="cargando" role="status" aria-label="Cargando"></span>
+        </div>
+        <div class="estado-item">
+          <span class="estado-etiqueta">Completado</span>
+          <span class="hecha"><span aria-hidden="true">✓</span> Tarea hecha</span>
+        </div>
+        <div class="estado-item estado-formulario">
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" class="error" type="email" value="correo-invalido" aria-invalid="true" aria-describedby="error-correo">
+          <small id="error-correo" class="error">Introduce un correo válido.</small>
+        </div>
+        <div class="estado-item">
+          <span class="estado-etiqueta">Botón activo</span>
+          <button class="boton boton-principal activo" type="button">Seleccionado</button>
+        </div>
+        <div class="estado-item">
+          <span class="estado-etiqueta">Texto oculto</span>
+          <!-- No se ve porque la clase .oculto aplica display: none; se conserva como ejemplo de contenido oculto. -->
+          <p class="oculto">Este párrafo está oculto visualmente.</p>
+          <span class="nota-oculto">El párrafo de ejemplo está oculto.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <span>Kit CSS</span>
+    <span>Hecho para construir con claridad.</span>
+  </footer>
+</body>
+</html>

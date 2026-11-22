@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario semanal | DILAN FELIPE VASQUEZ ARISTIZABAL</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f4f8;
+      color: #24313f;
+    }
+
+    header {
+      background-color: #16324f;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    nav {
+      background-color: #eaf2f8;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #16324f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .tabla-contenedor {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    caption {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 15px;
+      color: #16324f;
+    }
+
+    th, td {
+      border: 1px solid #aebdca;
+      padding: 14px 8px;
+      text-align: center;
+    }
+
+    thead th {
+      background-color: #16324f;
+      color: white;
+    }
+
+    tbody th {
+      background-color: #eaf2f8;
+    }
+
+    .descanso {
+      background-color: #dff4f1;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #16324f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Horario semanal</h1>
+    <p>DILAN FELIPE VASQUEZ ARISTIZABAL</p>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="index3.html">Hoja de vida</a>
+    <a href="Horario.html" aria-current="page">Horario semanal</a>
+  </nav>
+
+  <main>
+
+    <section>
+      <h2>Mi horario de clases</h2>
+
+      <div class="tabla-contenedor">
+        <table>
+          <caption>
+            Horario semanal de clases
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Hora</th>
+              <th scope="col">Lunes</th>
+              <th scope="col">Martes</th>
+              <th scope="col">Miércoles</th>
+              <th scope="col">Jueves</th>
+              <th scope="col">Viernes</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">12:00 - 14:15</th>
+              <td>JAVA SCRIPT</td>
+              <td>Requerimientos de Software</td>
+              <td>HTML</td>
+              <td>JAVA SCRIPT</td>
+              <td>Ingles</td>
+            </tr>
+
+            <tr>
+              <th scope="row">14:15 - 15:00</th>
+              <td class="descanso">Descanso</td>
+              <td class="descanso">Descanso</td>
+              <td class="descanso">Descanso</td>
+              <td class="descanso">Descanso</td>
+              <td class="descanso">Descanso</td>
+            </tr>
+
+            <tr>
+              <th scope="row">15:00 - 17:30</th>
+              <td>HTML</td>
+              <td rowspan="2">Requerimientos de Software</td>
+              <td>HTML</td>
+              <td>JAVA SCRIPT</td>
+              <td>Educacion Fisica</td>
+            </tr>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Nota: Este es el horario de todo el trimestre.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Correo:
+      <a href="mailto:dfvasquez369@gmail.com">
+        dfvasquez369@gmail.com
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>

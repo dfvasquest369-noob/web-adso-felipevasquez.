@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Registro en la Biblioteca</h1>
+        <form action="#" class="formulario" method="get">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                
+                <div class="campo">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                
+                <div class="campo">
+                    <label for="documento">Documento</label>
+                    <input type="text" id="documento" name="documento">
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" name="correo" id="correo">
+                </div>
+                
+                <div class="campo">
+                    <label for="nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01">
+                </div>
+                
+                <div class="campo">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" name="clave" id="clave" maxlength="8">
+                </div>
+                <div class="campo">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" min="0" max="120">
+                </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Tu Perfil</legend>
+                    <div class="campo">
+                        <label for="tipo">Tipo de Usuario</label>
+                        <select name="tipo" id="tipo">
+                            <option value="">Elige una opción</option>
+                            <option value="aprendiz">Aprendiz</option>
+                            <option value="instructor">Instructor</option>
+                            <option value="visitante">Visitante</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="grupo">
+                        <legend>Sede</legend>
+
+                        <label for="norte" class="opcion">
+                            <input type="radio" name="sede" id="norte" value="norte"> Norte
+                        </label>
+                        <label for="centro" class="opcion">
+                            <input type="radio" name="sede" id="centro" value="centro"> Centro
+                        </label>
+                        <label for="sur" class="opcion">
+                            <input type="radio" name="sede" id="sur" value="sur"> Sur
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="grupo">
+                        <legend>Temas que te interesan</legend>
+
+                        <label class="opcion">
+                            <input type="checkbox" name="temas" value="novelas"> Novelas
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="temas" value="ciencia"> Ciencia
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="temas" value="tecnologia"> Tecnología
+                        </label>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="comentario">
+                            ¿Qué libro te gustaría que tuviéramos?
+                        </label>
+                        <textarea id="comentario" name="comentario" rows="4"></textarea>
+                    </div>
+                </fieldset>
+            <button type="submit" class="boton">Registrarme</button>
+            </form>
+    </main>
+</body>
+</html>
