@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#f3f4f8"/>
+  <rect width="640" height="34" fill="#fff"/>
+  <circle cx="18" cy="17" r="4" fill="#f28f86"/>
+  <circle cx="34" cy="17" r="4" fill="#f2c56e"/>
+  <circle cx="50" cy="17" r="4" fill="#83c993"/>
+  <rect x="17" y="51" width="116" height="292" rx="8" fill="#22263c"/>
+  <rect x="31" y="69" width="68" height="9" rx="4" fill="#fff"/>
+  <rect x="31" y="101" width="79" height="6" rx="3" fill="#797d96"/>
+  <rect x="31" y="125" width="64" height="6" rx="3" fill="#797d96"/>
+  <rect x="31" y="149" width="73" height="6" rx="3" fill="#797d96"/>
+  <text x="155" y="72" fill="#262a3b" font-family="Arial,sans-serif" font-size="17" font-weight="700">Organiza tu día</text>
+  <text x="155" y="90" fill="#9295a3" font-family="Arial,sans-serif" font-size="9">Resumen de actividades</text>
+  <rect x="155" y="104" width="140" height="67" rx="8" fill="#fff"/>
+  <rect x="305" y="104" width="140" height="67" rx="8" fill="#fff"/>
+  <rect x="455" y="104" width="140" height="67" rx="8" fill="#fff"/>
+  <text x="169" y="124" fill="#888b99" font-family="Arial,sans-serif" font-size="9">Tareas de hoy</text>
+  <text x="169" y="149" fill="#292d3e" font-family="Arial,sans-serif" font-size="19" font-weight="700">08</text>
+  <text x="319" y="124" fill="#888b99" font-family="Arial,sans-serif" font-size="9">Completadas</text>
+  <text x="319" y="149" fill="#292d3e" font-family="Arial,sans-serif" font-size="19" font-weight="700">05</text>
+  <text x="469" y="124" fill="#888b99" font-family="Arial,sans-serif" font-size="9">Pendientes</text>
+  <text x="469" y="149" fill="#292d3e" font-family="Arial,sans-serif" font-size="19" font-weight="700">03</text>
+  <rect x="155" y="185" width="440" height="145" rx="8" fill="#fff"/>
+  <text x="171" y="207" fill="#36394a" font-family="Arial,sans-serif" font-size="11" font-weight="700">Mi semana</text>
+  <path d="M173 224h402M173 254h402M173 284h402M173 314h402" stroke="#ececf1"/>
+  <circle cx="183" cy="239" r="6" fill="#7658ef"/>
+  <rect x="201" y="235" width="145" height="8" rx="4" fill="#d9d2fa"/>
+  <circle cx="183" cy="269" r="6" fill="#68b98c"/>
+  <rect x="201" y="265" width="206" height="8" rx="4" fill="#d7eddf"/>
+  <circle cx="183" cy="299" r="6" fill="#f0c36b"/>
+  <rect x="201" y="295" width="170" height="8" rx="4" fill="#f8ebce"/>
+</svg>
